@@ -1,0 +1,47 @@
+{
+  "name": "login_form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zajrachi/nodeJs_login.git"
+  },
+  "keywords": [
+    "login",
+    "node",
+    "web",
+    "music"
+  ],
+  "author": "kimtran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zajrachi/nodeJs_login/issues"
+  },
+  "homepage": "https://github.com/zajrachi/nodeJs_login#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "html": "^1.0.0",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongoose": "^5.11.19",
+    "mysql": "^2.18.1",
+    "node-modules": "^1.0.1",
+    "nodemon": "^2.0.7",
+    "npm": "^7.6.3",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "sweetalert": "^2.1.2"
+  }
+}

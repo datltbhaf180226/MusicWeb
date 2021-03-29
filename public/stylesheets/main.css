@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    color: white;
+    background: black;
+}
+.top{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    float: left;
+    border-bottom: 2px solid rgba(130,140,150,.1);
+}
+.logo{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0 0 30px;
+    display: inline-block;
+    width: 15%;
+}
+.search-form{
+    position: absolute;
+    top: 15px;
+    left: 20%;
+    width: 60%;
+}
+.search-form input{
+    width: 90%;
+    height: 30px;
+    padding: 10px 0 10px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 540;
+    background: white;
+    color: black;
+}
+.fa-search{
+    position: relative;
+    left: -33px;
+    top: -2px;
+    color: black !important;
+    background: white;
+}
+.login{
+    margin: 20px 20px 0 ;
+    float: right;
+}
+.login ul li {
+    display: inline;
+}
+.signin{
+    padding: 10px;
+}
+.signup{
+    background: orangered;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    border-radius: 15px;
+}
+.signup i {
+    margin-right: 14px;
+    background: orangered;
+}
+.main{
+    float: left;
+}
+.left{
+    float: left;
+    padding: 20px 0 0 20px;
+    width: 15%;
+    height: 100%;
+    border-right: 2px solid rgba(130,140,150,.1);
+    overflow-y: auto;
+    width: var(--side-width);
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 990;
+    top: 60px;
+    bottom: 0;
+    overflow-y: hidden;
+}
+ul, a{
+    text-decoration: none;
+    list-style: none;
+}
+.left ul p {
+    opacity: 0.5;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.left ul li{
+    opacity: 0.7;
+}
+.left ul li{
+    padding: 0 0 20px 30px;
+}
+
+.left ul li i{
+    color: orangered;
+    height: 16px;
+    padding-right: 15px;
+}
+
+.right{
+    margin-left:15%;
+    float: left;
+    padding: 50px 0px 50px 0;
+    width: 85%;
+}
+.right h2{
+    color: #fff;
+   padding: 20px 0 20px 130px;
+   
+}
+.list-music{
+    width: 100%;
+    padding-left: 7%;
+}
+.list-music ul li{
+    height: 30%;
+    width: 23%;
+    padding: 0px;
+    border: none;
+    display: inline-block;
+}
+
+img{
+    height: 220px;
+    width: 100%;
+    
+    border-radius: 30px;
+}
+.footer{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 60px;
+    border-top: 1px solid rgba(130,140,150,.1);
+    padding: 30px 0 0 20% ;
+}
+.footer p{
+    font-size: 12px;
+    opacity: 0.5;
+}
+.footer ul{
+    margin-top: 20px ;
+}
+.footer ul li{
+    opacity: 0.9;
+    display: inline;
+    font-size: 12px;
+}

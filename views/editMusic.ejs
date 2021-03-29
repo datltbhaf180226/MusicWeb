@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit music page</title>
+
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="song">Song</label>
+            <input type="text" id="song" name="song" value="<%=data.song%>" required />
+        </div>
+        <div>
+            <label for="img">Image</label>
+            <input type="text" id="img" name="img" value="<%=data.img%>" required />
+        </div>
+        <div>
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" name="genre" value="<%=data.genre%>" required />
+        </div>
+        <div>
+            <label for="singer">Singer</label>
+            <input type="text" id="singer" name="singer" value="<%=data.singer%>"required />
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" value="<%=data.description%>"required />
+        </div>
+        <button type="button" id="create">Save</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        $('input[type="text"]').change(function () {
+            this.value = $.trim(this.value);
+        });
+    });
+    $(function () {
+        $('#create').click(function (e) {
+            const song = $('input[name=song]').val();
+            const img = $('input[name=img]').val();
+            const genre = $('input[name=genre]').val();
+            const singer = $('input[name=singer]').val();
+            const description = $('input[name=description]').val();
+            const data = { song: song, img: img, genre: genre, singer: singer, description: description };
+            let change = true;
+            if (change) {
+                $.ajax({
+                    type: 'POST',
+                    data: data,
+                    url: '/editMusic/<%=data.id%>',
+                    success: function (data) {
+                        if (data == true) {
+                            swal({
+                                title: "Good job!",
+                                text: "You clicked the button!",
+                                icon: "success",
+                                button: "Aww yiss!",
+                            }).then(function () {
+                                location.href = "/admin";
+                            });
+
+                        } else {
+                            swal("Oh noes!", "The AJAX request failed!", "error");
+                        }
+                    },
+                });
+            }
+        });
+    });
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+</head>
+
+<body>
+    <form action="/register" method="POST">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+        </div>
+        <div>
+            <label for="password">Confirm password</label>
+            <input type="password" id="confirm_password" name="confirm_password" onchange="check()" />
+            <span id="message"></span>            
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <script>
+        function check() {          
+            if(document.getElementById("password").value !== document.getElementById("confirm_password").value){
+                alert('Password not match')
+            }            
+        }
+    </script>
+    <!-- <script>
+        function loginForm(){
+            window.location='http://localhost:3000/login';
+        }
+    </script>
+    <button onclick="loginForm();">Login</button> -->
+</body>
+
+</html>

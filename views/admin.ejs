@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+</head>
+<body>
+    <a href="http://localhost:3000/addMusic">go to add music page</a>
+
+    <ul>
+        <% for(var i=0; i < data.length; i++) { %>
+            
+                <li class="mar-l100"><img src="<%= data[i].img%>" alt="Photo"><%= data[i].song%><a href="/editMusic/<%= data[i].id%>">Edit</a></li>
+                <li><%= data[i].singer%></li><br>
+                <li><%= data[i].genre%></li><br>
+                <li><p><%= data[i].description%></p></li>
+            
+        <% } %>    
+
+    </ul>
+
+       
+</body>
+</html>

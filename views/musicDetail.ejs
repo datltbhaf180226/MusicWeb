@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <title>TuneSource Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="logo"> TUNE SOURCE</div>
+        <form class="search-form" action="">
+            <input type="search" name="s" placeholder="Search...">
+            <label for="search-state" id="icon-search">
+                <i class="fas fa-search"></i>
+            </label>
+        </form>
+        <div class="login">
+            <ul>
+            <% if(data.user) { %>
+                <li ><a href=""><%= data.user.username%></a></li>
+                    <li class="signup"><a href="http://localhost:3000/logout">Logout</a></li>
+              <% } else { %>
+                <li class="signin"><a href="http://localhost:3000/login">Signin</a></li>
+                <li class="signup"><a href="http://localhost:3000/register"><i class="fas fa-user"></i>Signup</a></li>
+              <% } %>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="left">
+            <ul>
+                <p>Browse</p>
+                <li> <i class="fas fa-compact-disc"></i><a href="">Dicover</a> </li>
+                <li> <i class="fas fa-music"></i>Browse</li>
+                <li><i class="fas fa-th"></i>New Release</li>
+                <li><i class="fas fa-headphones"></i>Popular</li>
+                <li><i class="fas fa-sort-amount-up"></i>Charts</li>
+                <li><i class="fas fa-broadcast-tower"></i>Radio</li>
+                <p>Libray</p>
+                <li> <i class="fas fa-mug-hot"></i> Stream</li>
+                <li> <i class="fas fa-icons"></i> Playlists</li>
+                <li style="margin-bottom: 50%;"> <i class="fas fa-heart"></i> likes</li>
+                <li style="margin-top: 20px; padding: 10px; border-top:2px solid rgba(130,140,150,.1); padding-top: 30px;">
+                    <p style="font-size: 16px; opacity: inherit;">
+                        <a href="" style="margin-right: 20px; "> Press Room</a>
+                        <a href="" > About</a>
+                        <a href="" style="display: block; margin-top: 15px; "> Contruct Us</a>
+                    </p>
+                </li>
+                <li style="padding: 10px;">
+                    <p style="font-size: 16px; opacity: inherit;">
+                        <a href="" style="margin-right: 20px; "> Terms</a>
+                        <a href=""> Private Policy</a>
+                    </p>
+                </li>
+                <li style="padding: 10px;">
+                    <p>@2021 Music Theme</p>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h2 > Online Radio</h2>
+            <div class="list-music">
+                    <ul>
+                        <li class="mar-l100"><img src="<%= data.img%>" alt="Photo"><%= data.song%></li><br>
+                        <li><%= data.singer%></li><br>
+                        <li><%= data.genre%></li><br>
+                        <li><p><%= data.description%></p></li>
+                    </ul>
+            </div>
+            <div class="footer">
+                <p> @ Copyright 2021 Waveme Theme. All Rights Reserved </p>
+                <ul>
+                    <li>Service Term</li>
+                    <li>Music Policy⠀</li>
+                    <li>Cookie Warnings⠀</li>
+                    <li>Support⠀</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
