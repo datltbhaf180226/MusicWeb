@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add music page</title>
+
+    <link rel="stylesheet" href="../stylesheets/edit.css">
 </head>
 <body>
-    <form >
+    <!-- <form >
         <div>
             <label for="_id">ID</label>
             <input type="text" id="_id" name="_id" required/>
@@ -33,7 +35,86 @@
             <input type="text" id="description" name="description" required/>
         </div>
         <button type="button" id="create">Add</button>
-    </form>
+    </form> -->
+
+    <div class="top">
+        <div class="logo"> Tune Source</div>
+        <form class="search-form" action="">
+            <input name="s" placeholder="Search...">
+            <label for="search-state">
+                <i class="fas fa-search"></i>
+            </label>
+        </form>
+        <div class="login">
+            <ul>
+                <li class="signin">Signin</li>
+                <li class="signup"><i class="fas fa-user"></i>Singup</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="container">
+            <div class="left">
+                <ul class="menu">
+                    <li style="padding-top: 20px;"><i class="far fa-play-circle"></i><a href="admin.html">Music</a></li>
+                    <li><i class="fas fa-microphone-alt"></i> <a href="singer.html">Singer</a></li>
+                    <li style="padding-bottom: 300px;"> <i class="fas fa-align-justify"></i><a
+                            href="category.html">Category</a></li>
+                    <li
+                        style="margin-top: 20px;padding: 10px; border-top:2px solid rgba(130,140,150,.1); padding-top: 30px;">
+                        <p style="font-size: 16px; opacity: inherit;">
+                            <a href="" style="margin-right: 20px; "> Press Room</a>
+                            <a href=""> About</a>
+                            <a href="" style="display: block; margin-top: 15px; "> Contruct Us</a>
+                        </p>
+                    </li>
+                    <li style="padding: 10px;">
+                        <p style="font-size: 16px; opacity: inherit;">
+                            <a href="" style="margin-right: 20px; "> Terms</a>
+                            <a href=""> Private Policy</a>
+                        </p>
+                    </li>
+                    <li style="padding: 10px;">
+                        <p style="opacity: 0.5; font-size: 12px; padding-bottom: 10px;">@2021 Music Theme</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <form action="" class="add-form">
+                    <div class="row">
+                        <label for="">ID</label>
+                        <input type="text" id="_id" name="_id" required />
+                    </div>
+                    <div class="row">
+                        <label for="">Song Name</label>
+                        <input type="text" id="song" name="song" required />
+                    </div>
+                    <div class="row">
+                        <label for="">Image</label>
+                        <input type="text" id="img" name="img" required />
+                    </div>
+                    <div class="row">
+                        <label for="">Song category</label>
+                        <input type="text" id="genre" name="genre" required />
+                    </div>
+                    <div class="row">
+                        <label for="">Singer</label>
+                        <input type="text" id="singer" name="singer" required />
+                    </div>
+                    <div class="row">
+                        <label for="">Song description</label>
+                        <textarea type="text" id="description" name="description" required></textarea>
+                    </div>
+                    <div class="row">
+                        <button class="bt-ok" type="button" id="create">Update</button>
+                        <button class="bt-cancel"><a href="http://localhost:3000/admin">Cancel</a></button>
+                    </div>
+                </form>
+    
+            </div>
+        </div>
+    </div>
 
     <!-- Import jquery, sweetalert -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -57,7 +138,7 @@
             const img = $('input[name=img]').val();
             const genre = $('input[name=genre]').val();
             const singer = $('input[name=singer]').val();
-            const description = $('input[name=description]').val();
+            const description = $('#description').val();
             const data = { _id:id, song: song, img: img, genre: genre, singer: singer, description: description };
             let change = true;
             if (change) {

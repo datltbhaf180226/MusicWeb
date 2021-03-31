@@ -11,7 +11,7 @@
     height: 60px;
     background-color: black;
     position: fixed;
-    float: left;
+    z-index: 1000;
     border-bottom: 2px solid rgba(130,140,150,.1);
 }
 .logo{
@@ -67,6 +67,7 @@
 }
 .main{
     float: left;
+    width: 100%;
 }
 .left{
     float: left;
@@ -108,12 +109,13 @@ ul, a{
 .right{
     margin-left:15%;
     float: left;
-    padding: 50px 0px 50px 0;
+    padding: 10px 0px 50px 0;
     width: 85%;
 }
 .right h2{
     color: #fff;
-   padding: 20px 0 20px 130px;
+    margin-top: 30px;
+   padding: 0 0 20px 130px;
    
 }
 .list-music{

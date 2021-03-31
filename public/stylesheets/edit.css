@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    
+}
+.top{
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: fixed;
+    background: white;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0 0 30px;
+    display: inline-block;
+}
+.search-form{
+    position: absolute;
+    top: 15px;
+    
+    left: 20%;
+    width: 60%;
+}
+.search-form input{
+    width: 90%;
+    height: 30px;
+    padding: 10px 0 5px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 540;
+    border: 1px solid gray;
+}
+.fa-search{
+    position: relative;
+    left: -33px;
+    top: -2px;
+    color: black !important;
+}
+.login{
+    margin: 20px 20px 0 ;
+    float: right;
+}
+.login ul li {
+    display: inline;
+}
+.signin{
+    padding: 10px;
+}
+.signup{
+    background: orangered;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    border-radius: 15px;
+}
+.signup i {
+    margin-right: 14px;
+    background: orangered;
+}
+.main{
+  float: left;
+  width: 100%;
+  margin-top: 60px;
+}
+.left{
+    float: left;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    top: 60px;
+    padding: 20px 0 0 20px;
+    width: 15%;
+    height: 100%;
+    border-right: 2px solid rgba(0, 0, 0, 0.1);     
+}
+ul, a{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    color: black;
+}
+.left ul li{
+    padding: 0 0 20px 20px;
+}
+.left ul li a{
+    opacity: 0.7;
+}
+
+.left ul li i{
+    color: rgb(235, 77, 20);
+    height: 16px;
+    padding-right: 15px;
+}
+.right{
+    margin-left: 15%;
+    float: left;
+    padding: 30px  0 50px 20%;
+    width: 84%;
+}
+.add-form{
+    border: 1px solid gray;
+    width: 55%;
+    border-radius: 10px;
+    background: rgb(247, 244, 244);
+    padding: 30px;
+
+}
+.row{
+    margin: 10px 0 30px 0;
+    width: 100%;
+}
+.row input{
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    background: white;
+    padding: 5px 5px 5px 10px;
+    border: 1px solid rgb(134, 139, 139) ;
+    
+}
+
+.row textarea{
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    padding: 10px 5px 5px 10px;
+    border-radius: 10px;
+}
+ .row button{
+     padding: 5px;
+     height: 30px;
+     border-radius: 5px;
+     border: none;
+ }
+ .bt-ok{
+     background: blue;
+     color: white;
+     font-weight: 900;
+     margin: 0 20% 0 20%;
+     width: 70px;
+ }
+ .bt-cancel{
+     background: gray;
+     color: white;
+     font-weight: 900;
+     width: 70px;
+ }
+
